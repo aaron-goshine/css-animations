@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    <meta charset="UTF-8">
+    <title>Untitled Page</title>
+    <script src="dom.util.js"></script>
+    <script>
+      var init = function () {
+        var card = document.getElementById('card');
+        var front = document.getElementById('front');
+
+        document.getElementById('flip').addEventListener('click', function () {
+          card.toggleClassName('flipped');
+        }, false);
+
+        document.getElementById('backface').addEventListener('click', function () {
+          front.toggleClassName('face');
+        }, false);
+
+      };
+
+      window.addEventListener('DOMContentLoaded', init, false);
+
+    </script>
+    <style>
+      * {
+        box-sizing: border-box;
+        font-family: helvetica;
+      }
+
+      button {
+        margin: 0 auto 2em auto;
+        width: 100px;
+        height: 2em;
+        display: block;
+      }
+      #backface {
+        width: 150px;
+      }
+
+      #card, #front, #back {
+        width: 200px;
+        height: 200px;
+        color: #fff;
+        text-align: center;
+      }
+
+      #card {
+        position: relative;
+        margin: 0 auto 2em auto;
+        margin: 1em auto;
+        font-size: 2em;
+        -webkit-transform-style: preserve-3d;
+      }
+
+      #front {
+        position: absolute;
+        background: red;
+        -webkit-transform: rotateY(180deg);
+      }
+
+      #back {
+        position: absolute;
+        background: blue;
+        -webkit-transform: rotate(0deg);
+      }
+
+      .flipped {
+        -webkit-transform: rotateY(180deg);
+      }
+
+      .face {
+        -webkit-backface-visibility: hidden;
+        padding-top: 2em;
+      }
+
+
+    </style>
+
+  </head>
+  <body>
+    <div id="card" class="flipped">
+      <div class="face" id="front">Welcome to the Front</div>
+      <div class="face" id="back">See you in the Back</div>
+    </div>
+    <button id="flip">Flip</button>
+    <button id="backface">Toggle backface-visibility</button>
+  </body>
+</html>
+
