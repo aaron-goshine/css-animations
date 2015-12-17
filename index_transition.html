@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    <meta charset="UTF-8">
+    <title>Untitled Page</title>
+    <style>
+      .container {
+        width: 200px;
+        margin: 10em auto;
+      }
+
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: #33f;
+        -webkit-transition-property: background-color, transform, width;
+        -webkit-transition-duration: 10s, 2s, 5s, 15s;
+      }
+      
+      .box:hover {
+        background-color: #f33;
+        width: 400px;
+        -webkit-transform: rotate(45deg);
+        -webkit-transform-timing-function: steps(5, end);
+      }
+ 
+
+    </style>
+
+  </head>
+  <body>
+    <div class="continer">
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
+
