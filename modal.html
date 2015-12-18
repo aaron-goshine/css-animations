@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    <meta charset="UTF-8">
+    <title>Untitled Page</title>
+    <style>
+      .container {
+        max-width: 48em;
+        margin:3em auto;
+        position: relative;
+        overflow: hidden visible;
+      }
+      .btn {
+        background: #7a7;
+        padding: 1em 2em;
+        border: 1px solid #694;
+        border-radius: 0.25em;
+        text-decoration: none;
+        color: #fff;
+        float: right;
+        position: relative;
+        z-index: 5;
+      }
+
+      .login input {
+        margin-bottom: 1.5em;
+        display: block;
+      }
+
+      .login imput[type=submit] {
+        display: block;
+        float: left;
+        font-size: 0.76em;
+        background: #7a6;
+        color: #fff;
+        padding: 1em 2em;
+        border: 0;
+      }
+
+      label {
+        display: block;
+      }
+
+      .modal {
+        font-size: 1.24em;
+        background: #eee;
+        color: #000;
+        border: 1px solid #ccc;
+        border-radius: 3%;
+        padding: 7em;
+        margin-bottom: 1.5em;
+        position: fixed;
+        top: 5em;
+        left: calc(50% - 5em);
+        z-index: 1;
+        opacity: 0;
+        -webkit-transform-origin: center;
+        -webkit-transform: translateY(150%);
+        -webkit-transition: opacity 0.5s ease-in-out;
+      }
+      .close {
+        background: rgba(123, 123, 123, 0.5);
+        border-radius: 100%;
+        display: block;
+        width: 20px;
+        height: 20px;
+        border: 1px solid #666;
+        top: 1em;
+        right: 1em;
+        position: absolute;
+        color: #fff;
+        text-decoration: none;
+        text-align: center;
+        line-height: 20px;
+        font-size: 0.75em;
+      }
+      .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(128, 128, 128, 0.9);
+        opacity: 0;
+        -webkit-tansition: opacity 0.5s ease-in-out;
+      }
+
+      :target .modal {
+        opacity: 1;
+        z-index: 10;
+        -webkit-transform: translateX(0); 
+      }
+
+      :target .overlay {
+        opacity: 1;
+        z-index: 5;
+        -webkit-transform: translateX(0); 
+      }
+    </style>
+  </head>
+  <body>
+    <div class="cantainer" id="open">
+      <div class="modal-container">
+        <div class="modal">
+          <form class="login" action="/">
+            <label>Email</label>
+            <input type="email"/>
+            <label>Password</label>
+            <input type="password"/>
+            <input type="submit" value="Login"/>
+          </form>
+          <a href="#" class="close">&times;</a>
+        </div>
+      </div>
+      <a href="#open" class="btn">Login</a>
+      <div class="overlay"></div>
+    </div>
+  </body>
+</html>
+
