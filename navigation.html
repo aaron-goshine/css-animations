@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>  
+    <meta charset="UTF-8">
+    <title>Untitled Page</title>
+    <style>
+      * {
+        box-sixing: border-box;
+      }
+
+      body {
+        font-family: 'helvetica';
+        font-size; 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      .menu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        background: #555;
+        text-align: center;
+        position: relative;
+        z-index: 0;
+        display: table;
+      }
+
+      .menu > li {
+        display: inline-block;
+        zoom: 1;
+      }
+
+      .menu a {
+        text-decoration: none;
+        display: block;
+        padding: 0.75 1.5em;
+        display: block;
+        background: #555;
+        color: #fff;
+        padding: 0.75em;
+        border-bottom: 1px solid #666;
+        -webkit-transition: background 0.5s;
+      }
+
+      .menu a:hover {
+        background: #777;
+      }
+
+      .submenu {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        background: #555;
+        position: absolute;
+        z-index: -1;
+        -webkit-transform: translateY(-10em);
+        -webkit-transition: -webkit-transform 0.76s ease 0.01s;
+      }
+
+      .submenu a {
+        padding: 0.75em;
+        border-bottom: 1px solid #666;
+      }
+
+      .menu li:hover .submenu {
+        opacity: 1.0;
+        -webkit-transform: translateY(0);
+      }
+
+    </style>
+
+  </head>
+  <body>
+    <ul class="menu">
+      <li><a href="/">Item 1</a>
+        <ul class="submenu">
+          <li><a href="/">Sub Item 1</a></li>
+          <li><a href="/">Sub Item 2</a></li>
+          <li><a href="/">Sub Item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="/">Item 2</a>
+        <ul class="submenu">
+          <li><a href="/">Sub Item 1</a></li>
+          <li><a href="/">Sub Item 2</a></li>
+          <li><a href="/">Sub Item 3</a></li>
+        </ul>
+      </li>
+      <li><a href="/">Item 3</a></li>
+      <li><a href="/">Item 4</a></li>
+      <li><a href="/">Item 5</a></li>
+    </ul>
+    <div>
+
+      <div class="box"></div>
+    </div>
+  </body>
+</html>
+
