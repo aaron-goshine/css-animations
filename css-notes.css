@@ -1,0 +1,81 @@
+/**
+ * Level one notes
+ * ===============
+ *
+ * Global Styles
+ * Website Name
+ * Author
+ * Aurthor Contact
+ *
+ * Content:
+ * 1. Basic HTML elements
+ * 2. Layout Grid
+ * 3. Header Content Styles
+ * 4. General Page Content Styles
+ * 5. Specific Page Styles (index, articles, ...)
+ * 6. Footer Content Styles
+ *
+ * */
+
+/** E(type Selectors) */
+/* the type selector selects and element by its type */
+h1 {}
+form {}
+header {}
+
+/** *(Universal Selector) */
+/* The universal selector matches any element type in the document.
+ * It is implied if there is a sequence of other simple selectors and no
+ * specific type selector is present.
+ */
+
+* {}
+
+/** #id(ID Selector) */
+/*The Id selector matches any element with the specified value as its ID
+ * attribute */
+
+#header {}
+element#header {}
+
+/** .Class (Class Selector) */
+.help
+element.help
+
+/** [att] (Attribute selector */
+input[require] {}
+input[type=text] {}
+input[type~=text] {}
+input[type|=text] {}
+input[type^=text] {}
+input[type$=text] {}
+input[type*=text] {}
+
+
+/** Pseudo-class selectors */
+/*:link, :visted (Link Pseudo-classes)*/
+a:link {}
+a:visited {}
+
+/* :hover, :active, :focus(Action Pseudo-class) */
+a:hover {}
+a:active {}
+input:focus {}
+
+/**:target (Target Pseudo-class) */
+:target element {}
+
+/** Ui (UI Pseudo-classes) */
+:enabled element {}
+:disabled element {}
+:checked elements {}
+
+/** lange() (Language Pseudo-class) */
+element:lang(en)
+
+/** --- */
+
+:root
+element:nth-child(2)
+element:nth-last-child()
+             
